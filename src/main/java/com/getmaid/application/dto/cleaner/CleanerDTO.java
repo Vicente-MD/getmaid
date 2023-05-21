@@ -24,4 +24,13 @@ public class CleanerDTO {
                 .habilities(habilities)
                 .build();
     }
+
+    public static CleanerDTO fromDomain(Cleaner cleaner) {
+        return CleanerDTO.builder()
+                .id(cleaner.getId())
+                .email(cleaner.getEmail())
+                .phone(cleaner.getPhone())
+                .habilities(cleaner.getHabilities())
+                .build();
+    }
 }

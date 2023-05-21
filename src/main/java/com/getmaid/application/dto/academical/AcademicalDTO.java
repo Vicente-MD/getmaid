@@ -17,9 +17,17 @@ public class AcademicalDTO {
 
     public Academical toDomain() {
         return Academical.builder()
-            .id(id)
-            .name(name)
-            .email(email)
-            .phone(phone).build();
+                .id(id)
+                .name(name)
+                .email(email)
+                .phone(phone).build();
+    }
+
+    public static AcademicalDTO fromDomain(Academical academical) {
+        return AcademicalDTO.builder()
+                .id(academical.getId())
+                .name(academical.getName())
+                .email(academical.getEmail())
+                .phone(academical.getPhone()).build();
     }
 }
